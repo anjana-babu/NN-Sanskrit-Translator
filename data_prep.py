@@ -82,12 +82,12 @@ def save_clean_data(sentences, filename):
 raw_dataset = load_clean_sentences('english-german.pkl')
  
 # reduce dataset size
-n_sentences = 10000
+n_sentences = 25000
 dataset = raw_dataset[:n_sentences, :]
 # random shuffle
 shuffle(dataset)
 # split into train/test
-train, test = dataset[:9000], dataset[9000:]
+train, test = dataset[:22500], dataset[22500:]
 # save
 save_clean_data(dataset, 'english-german-both.pkl')
 save_clean_data(train, 'english-german-train.pkl')
